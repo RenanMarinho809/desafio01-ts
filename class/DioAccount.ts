@@ -27,8 +27,10 @@ export abstract class DioAccount {
 
   withdraw = (amount: number): void => {
     this.balance -= amount
-    if(this.validateStatus()){
+    if(this.validateStatus() && this.balance >= amount){
       console.log('Voce sacou' + amount)
+    }else{
+      console.log('Saldo insuficiente')
     }
     
   }
