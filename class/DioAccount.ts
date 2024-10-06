@@ -47,3 +47,4 @@ export abstract class DioAccount {
     throw new Error('Conta inválida')
   }
 }
+
